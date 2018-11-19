@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static System.Console;
+namespace DemoORAndAND
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            const int ZONE1 = 1, ZONE2 = 2;
+            const int LOW_QUANTITY = 10;
+            string inputString;
+            int quantity;
+            int deliveryZone;
+
+            WriteLine("Delivery is free for zone {0} or {1}",
+                ZONE1, ZONE2);
+            WriteLine("when the number for boxes is less than {0}",
+                LOW_QUANTITY);
+            WriteLine("Enter delivery zone ");
+            inputString = ReadLine();
+            deliveryZone = Convert.ToInt32(inputString);
+            WriteLine("Enter the number of boxes in shipment");
+            inputString = ReadLine();
+            quantity = Convert.ToInt32(inputString);
+
+            if ((deliveryZone == ZONE1 || deliveryZone == ZONE2) &&
+                quantity < LOW_QUANTITY)
+            {
+                WriteLine("Delivery is Free");
+
+            }
+            else
+                WriteLine("A delivery change applies");
+
+
+        }
+    }
+}
