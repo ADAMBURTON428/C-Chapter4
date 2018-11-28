@@ -16,5 +16,26 @@ namespace Admission
         {
             InitializeComponent();
         }
+
+        private void btnEnter_Click(object sender, EventArgs e)
+        {
+            double GPA;
+            int Test;
+
+            GPA = Convert.ToDouble(txtGPA.Text);
+            Test = Convert.ToInt32(txtTestScore.Text);
+
+            if (GPA >= 3.0 && Test >= 60)
+            {
+                lblOutput.Text = "Accept";
+
+            }
+            else if (GPA <= 3.0 && Test >= 80)
+            {
+                lblOutput.Text = "Accept";
+            }
+            else
+                lblOutput.Text = "Reject";
+        }
     }
 }
