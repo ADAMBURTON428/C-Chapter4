@@ -22,8 +22,10 @@ namespace RockPaperScissor
        
         private void DisplayResult(int UserChoice)
         {
-            
-            
+
+
+            int win = 0;
+            int lose = 0;
             Random ranNumberGenrator = new Random();
             int ComputerChoice;
             ComputerChoice = ranNumberGenrator.Next(1, 4);
@@ -36,6 +38,7 @@ namespace RockPaperScissor
                 else if (UserChoice == 2)
                 {
                     lblWinLose.Text = "You win";
+                    lblPlayer.Text = "" + win++;
                 }
                 else
                 {
@@ -49,6 +52,7 @@ namespace RockPaperScissor
                 if (UserChoice == 1)
                 {
                     lblWinLose.Text = "You lose";
+                    lblPlayer.Text = "" + win++;
                 }
                 else if (UserChoice == 2)
                 {
@@ -57,6 +61,7 @@ namespace RockPaperScissor
                 else
                 {
                     lblWinLose.Text = "You win";
+                    lblPlayer.Text = "" + win++;
                 }
             }
             else if (ComputerChoice == 3)
@@ -64,10 +69,12 @@ namespace RockPaperScissor
                 if (UserChoice == 1)
                 {
                     lblWinLose.Text = "You lose";
+                   
                 }
                 else if (UserChoice == 2)
                 {
                     lblWinLose.Text = "You win";
+                    lblPlayer.Text = "" + win++;
                 }
                 else
                     lblWinLose.Text = "Tie";
