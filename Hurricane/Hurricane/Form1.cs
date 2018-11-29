@@ -26,7 +26,7 @@ namespace Hurricane
             const int Category2 = 96;
             const int Category1 = 75;
 
-            WindSpeed = Convert.ToInt32(txtWindSpeed.Text);   
+            WindSpeed = Convert.ToInt32(txtWindSpeed.Text);
 
             if (WindSpeed < Category1)
             {
@@ -36,7 +36,22 @@ namespace Hurricane
             {
                 lblWindCategory.Text = "Category 1";
             }
-            esle if (WindSpeed)
+            else if (WindSpeed >= Category2 && WindSpeed < Category3)
+            {
+                lblWindCategory.Text = "Category 2";
+            }
+            else if (WindSpeed >= Category3 && WindSpeed < Category4)
+            {
+                lblWindCategory.Text = "Category 3";
+            }
+            else if (WindSpeed >= Category4 && WindSpeed < Category5)
+            {
+                lblWindCategory.Text = "Category 4";
+            }
+            else if (WindSpeed >= Category5)
+            {
+                lblWindCategory.Text = "Category 5";
+            }
         }
 
       
